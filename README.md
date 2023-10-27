@@ -2,8 +2,7 @@
 
 This is a personal database for keeping track of various commands and their examples.
 
-<details>
-  <summary>Inscribing Commands</summary>
+### Inscribing Commands
 
 **1. Normal Inscription:**  
 Use the standard fee rate for a normal inscription.  
@@ -107,5 +106,3 @@ inscriptions:
 Perform batch inscriptions by specifying a batch file.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --satpoint TXID:OUTPUT:SAT --file "FILE"`  
 Example (10th sat in that utxo): `ord wallet inscribe --fee-rate 10 --satpoint 5ffab6b75dbfa7830a2d4a8520f13d6c7aa095688616af23c82a4da4c7af2e82:0:10 --file "D:\Files\1.txt"`
-
-</details>
