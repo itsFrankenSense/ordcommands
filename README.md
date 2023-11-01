@@ -20,6 +20,7 @@ Example: `ord wallet inscribe --fee-rate 10 "D:\Files\1.txt"`
 ---
 
 ### 2 Reduced Padding Inscription
+[Example Inscription 330 sats](https://ordinals.com/inscription/a86a426fe273f330238765cd941477fa3f647dc9235cf36ba4c3e8b56064c335i4)
 Inscribe with a specified postage for reduced padding (default is 10k sats).  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --postage <POSTAGE> --file "FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 --postage 330sats --file "D:\Files\1.txt"`
