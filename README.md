@@ -2,7 +2,15 @@
 
 This is a personal database for keeping track of various commands and their examples.
 
-### Inscribing Commands
+## Quick References:
+- [1. Normal Inscription](#1-normal-inscription)
+- [2. Reduced Padding Inscription](#2-reduced-padding-inscription)
+- [3. Inscription with metadata](#3-inscription-with-metadata)
+- [4. Provenance Inscription](#4-provenance-inscription)
+- [5. Batch Inscription](#5-batch-inscription)
+- [6. Inscribe on a specific sat (must have 2 UTXOs in wallet)](#6-inscribe-on-a-specific-sat-must-have-2-utxos-in-wallet)
+
+---
 
 **1. Normal Inscription:**  
 A standard inscription.  
@@ -10,12 +18,12 @@ Command: `ord wallet inscribe --fee-rate <FEE_RATE> --file "FILE"`
 Example: `ord wallet inscribe --fee-rate 10 "D:\Files\1.txt"`
 
 **2. Reduced Padding Inscription:**  
-Inscribe with a specified postage for reduced padding.  
+Inscribe with a specified postage for reduced padding (default is 10k sats).  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --postage <POSTAGE> --file "FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 --postage 330sats --file "D:\Files\1.txt"`
 
 **3. [Inscription with metadata:](https://ordinals.com/inscription/cadc6c906fcf340452c7ad40ce59dafb207b685026a18606531534f121d6c301i0)**  
-Inscribe a file with JSON metadata.  
+Inscribe with JSON metadata.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --json-metadata <JSON_METADATA> --file "FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 --json-metadata "D:\Files\metadata.json" --file "D:\Files\1.txt"`
 
