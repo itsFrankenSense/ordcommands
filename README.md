@@ -12,17 +12,22 @@ This is a personal database for keeping track of various commands and their exam
 
 ---
 
-**1. Normal Inscription:**  
+### 1 Normal Inscription
 A standard inscription.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --file "FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 "D:\Files\1.txt"`
 
-**2. Reduced Padding Inscription:**  
+---
+
+### 2 Reduced Padding Inscription
 Inscribe with a specified postage for reduced padding (default is 10k sats).  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --postage <POSTAGE> --file "FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 --postage 330sats --file "D:\Files\1.txt"`
 
-**3. [Inscription with metadata:](https://ordinals.com/inscription/cadc6c906fcf340452c7ad40ce59dafb207b685026a18606531534f121d6c301i0)**  
+---
+
+### 3 Inscription with metadata
+[Details](https://ordinals.com/inscription/cadc6c906fcf340452c7ad40ce59dafb207b685026a18606531534f121d6c301i0)  
 Inscribe with JSON metadata.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --json-metadata <JSON_METADATA> --file "FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 --json-metadata "D:\Files\metadata.json" --file "D:\Files\1.txt"`
@@ -45,12 +50,18 @@ Example: `ord wallet inscribe --fee-rate 10 --json-metadata "D:\Files\metadata.j
 ```
 </details>
 
-**4. [Provenance Inscription:](https://ordinals.com/inscription/b03f8f87e64eeab788ad62c3ffe35e9a875c97ca802ec0ae04d932584acdc475i0)**  
+---
+
+### 4 Provenance Inscription
+[Details](https://ordinals.com/inscription/b03f8f87e64eeab788ad62c3ffe35e9a875c97ca802ec0ae04d932584acdc475i0)  
 Inscribe a file with a specified parent inscription ID.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --parent <PARENT_INSCRIPTION_ID> --file "CHILD_FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 --parent b03f8f87e64eeab788ad62c3ffe35e9a875c97ca802ec0ae04d932584acdc475i0 --file "D:\Files\1.txt"`
 
-**5. [Batch Inscription:](https://ordinals.com/inscription/cadc6c906fcf340452c7ad40ce59dafb207b685026a18606531534f121d6c301i0)**  
+---
+
+### 5 Batch Inscription
+[Details](https://ordinals.com/inscription/cadc6c906fcf340452c7ad40ce59dafb207b685026a18606531534f121d6c301i0)  
 Perform batch inscriptions by specifying a batch file.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --batch "BATCH_FILE"`  
 Example: `ord wallet inscribe --fee-rate 10 --batch "D:\Files\batch.yaml"`
@@ -107,10 +118,14 @@ inscriptions:
         - trait_type: "Mood"
           value: "Contemplative"
       rarity: "Ultra Rare"
+
 ```
 </details>
 
-**6. [Inscribe on a specific sat (must have 2 UTXOs in wallet):](https://mempool.space/tx/bf1af18d129f088353bb0ad37cdcf9f02b25e937583c366120da27eb7719b044#flow=&vin=0)**  
+---
+
+### 6 Inscribe on a specific sat (must have 2 UTXOs in wallet)
+[Details](https://mempool.space/tx/bf1af18d129f088353bb0ad37cdcf9f02b25e937583c366120da27eb7719b044#flow=&vin=0)  
 Create an inscription on a specific sat in your wallet.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --satpoint TXID:OUTPUT:SAT --file "FILE"`  
 Example (10th sat in that utxo): `ord wallet inscribe --fee-rate 10 --satpoint 5ffab6b75dbfa7830a2d4a8520f13d6c7aa095688616af23c82a4da4c7af2e82:0:10 --file "D:\Files\1.txt"`
