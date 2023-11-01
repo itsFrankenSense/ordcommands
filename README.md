@@ -3,12 +3,21 @@
 This is a personal database for keeping track of various commands and their examples.
 
 ## Quick References:
+- [Dry Run Testing](#dry-run-(testing))
 - [1. Normal Inscription](#1-normal-inscription)
-- [2. Reduced Padding Inscription](#2-reduced-padding-inscription)
-- [3. Inscription with metadata](#3-inscription-with-metadata)
-- [4. Provenance Inscription](#4-provenance-inscription)
-- [5. Batch Inscription](#5-batch-inscription)
-- [6. Inscribe on a specific sat (must have 2 UTXOs in wallet)](#6-inscribe-on-a-specific-sat-must-have-2-utxos-in-wallet)
+- [2. Normal Inscription and send to specified address](#2-normal-inscription-and-send-to-specified-address) 
+- [3. Reduced Padding Inscription](#3-reduced-padding-inscription)
+- [4. Inscription with metadata](#4-inscription-with-metadata)
+- [5. Provenance Inscription](#5-provenance-inscription)
+- [6. Batch Inscription](#6-batch-inscription)
+- [7. Inscribe on a specific sat (must have 2 UTXOs in wallet)](#7-inscribe-on-a-specific-sat-must-have-2-utxos-in-wallet)
+
+---
+
+### Dry Run (testing)   
+Dry run allows you to construct the transaction without signing or broadcasting. This provides a fee estimate and confirms the rest of your command is constructed correctly.   
+Command: `ord wallet inscribe --fee-rate <FEE_RATE> --file "FILE" --dry-run`  
+Example: `ord wallet inscribe --fee-rate 10 "D:\Files\1.txt" --dry-run`
 
 ---
 
@@ -18,7 +27,13 @@ Command: `ord wallet inscribe --fee-rate <FEE_RATE> --file "FILE"`
 Example: `ord wallet inscribe --fee-rate 10 "D:\Files\1.txt"`
 
 ---
-### 2 Reduced Padding Inscription
+### 2 Normal Inscription and send to specified address  
+Inscribe and send to specified address.    
+Command: `ord wallet inscribe --fee-rate <FEE_RATE> --file "FILE" --destination <ADDRESS>`   
+Example: `ord wallet inscribe --fee-rate 10 --postage 330sats --file "D:\Files\1.txt" --destination bc1pwdreq8nxulu96p2zrxmmfgcnhfg05vlw85clqx22s5qtx9ah9dzshcj4lc`
+
+---
+### 3 Reduced Padding Inscription
 [Example Inscription padded with 330 sats](https://ordinals.com/inscription/a86a426fe273f330238765cd941477fa3f647dc9235cf36ba4c3e8b56064c335i4)  
 Inscribe with a specified postage for reduced padding (default is 10k sats).   
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --postage <POSTAGE> --file "FILE"`   
@@ -26,7 +41,7 @@ Example: `ord wallet inscribe --fee-rate 10 --postage 330sats --file "D:\Files\1
 
 ---
 
-### 3 Inscription with metadata
+### 4 Inscription with metadata
 [Example Inscription](https://ordinals.com/inscription/cadc6c906fcf340452c7ad40ce59dafb207b685026a18606531534f121d6c301i0)  
 Inscribe with JSON metadata.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --json-metadata <JSON_METADATA> --file "FILE"`  
@@ -52,7 +67,7 @@ Example: `ord wallet inscribe --fee-rate 10 --json-metadata "D:\Files\metadata.j
 
 ---
 
-### 4 Provenance Inscription
+### 5 Provenance Inscription
 [Example Parent Inscription](https://ordinals.com/inscription/b03f8f87e64eeab788ad62c3ffe35e9a875c97ca802ec0ae04d932584acdc475i0)  
 Inscribe a file with a specified parent inscription ID.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --parent <PARENT_INSCRIPTION_ID> --file "CHILD_FILE"`  
@@ -60,7 +75,7 @@ Example: `ord wallet inscribe --fee-rate 10 --parent b03f8f87e64eeab788ad62c3ffe
 
 ---
 
-### 5 Batch Inscription
+### 6 Batch Inscription
 [Example Batch Inscription](https://ordinals.com/inscription/cadc6c906fcf340452c7ad40ce59dafb207b685026a18606531534f121d6c301i0)  
 Perform batch inscriptions by specifying a batch file.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --batch "BATCH_FILE"`  
@@ -124,7 +139,7 @@ inscriptions:
 
 ---
 
-### 6 Inscribe on a specific sat (must have 2 UTXOs in wallet)
+### 7 Inscribe on a specific sat (must have 2 UTXOs in wallet)
 [Sapoint example transaction](https://mempool.space/tx/bf1af18d129f088353bb0ad37cdcf9f02b25e937583c366120da27eb7719b044#flow=&vin=0)  
 Create an inscription on a specific sat in your wallet.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --satpoint TXID:OUTPUT:SAT --file "FILE"`  
