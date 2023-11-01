@@ -15,7 +15,7 @@ This is a personal database for keeping track of various commands and their exam
 ---
 
 ### Dry Run (testing)   
-Dry run allows you to construct the transaction without signing or broadcasting. This provides a fee estimate and confirms the rest of your command is constructed correctly.   
+Dry run allows you to construct the transaction without signing or broadcasting. This provides a fee estimate and confirms the rest of your command is constructed correctly. `--dry-run` can be added to the end of any commands.  
 Command: `ord wallet inscribe --fee-rate <FEE_RATE> --file "FILE" --dry-run`  
 Example: `ord wallet inscribe --fee-rate 10 "D:\Files\1.txt" --dry-run`
 
