@@ -158,4 +158,4 @@ Example (10th sat in that utxo): `ord wallet inscribe --fee-rate 10 --satpoint 5
 ### 8 Start indexing with Satoshi tracking
 
 Command: `ord --index-sats index run`
-Explanation: if you already have an index.redb then either rename it or delete it first
+Explanation: `if you already have an index.redb then either rename it or delete it first`
