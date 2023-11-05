@@ -156,7 +156,9 @@ Example (10th sat in that utxo): `ord wallet inscribe --fee-rate 10 --satpoint 5
 
 ---
 
-### 8 Start indexing with Satoshi tracking
+### 8 Start indexing with Sat tracking
+`--index-sats index` creates a full sat index allowing the tracing of individual sats.   
+If you already have an index.redb you will need to either rename or delete it first.
 
-Command: `ord --index-sats index run`   
-Explanation: `if you already have an index.redb then either rename it or delete it first`
+Command: `ord --index-sats index run`
+
