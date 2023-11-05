@@ -151,12 +151,12 @@ inscriptions:
 [Satpoint example transaction](https://mempool.space/tx/bf1af18d129f088353bb0ad37cdcf9f02b25e937583c366120da27eb7719b044#flow=&vin=0)  
 `--satpoint <TXID:OUTPUT:SAT>` Create an inscription on a specific sat in your wallet.
 
-Command: `ord wallet inscribe --fee-rate <FEE_RATE> --satpoint <TXID:OUTPUT:SAT> --file "FILE"`  
+Command: `ord wallet inscribe --fee-rate <FEE_RATE> --satpoint <TXID:OUTPUT:SAT> --file "FILE"`     
 Example (10th sat in that utxo): `ord wallet inscribe --fee-rate 10 --satpoint 5ffab6b75dbfa7830a2d4a8520f13d6c7aa095688616af23c82a4da4c7af2e82:0:10 --file "D:\Files\1.txt"`
 
 ---
 
 ### 8 Start indexing with Satoshi tracking
 
-Command: `ord --index-sats index run`
+Command: `ord --index-sats index run`   
 Explanation: `if you already have an index.redb then either rename it or delete it first`
